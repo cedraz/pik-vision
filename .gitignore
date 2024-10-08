@@ -1,0 +1,11 @@
+# Ambiente virtual
+pik_vision_venv/
+
+# Outros arquivos e pastas que você deseja ignorar
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.DS_Store
