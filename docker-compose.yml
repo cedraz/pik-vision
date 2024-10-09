@@ -6,7 +6,7 @@ services:
     environment:
       - POSTGRES_USER=johndoe
       - POSTGRES_PASSWORD=randompassword  # Certifique-se de que esta senha está correta
-      - POSTGRES_DB=pik-vision
+      - POSTGRES_DB=pik-vision-db
 
   redis:
     image: redis:7-alpine
