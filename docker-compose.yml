@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:alpine
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=johndoe
+      - POSTGRES_PASSWORD=randompassword  # Certifique-se de que esta senha está correta
+      - POSTGRES_DB=pik-vision
+
+  redis:
+    image: redis:7-alpine
+    container_name: pik-vision-redis
+    ports:
+      - 6382:6379
+    environment:
+      - NODE_ENV=dev
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 10M
