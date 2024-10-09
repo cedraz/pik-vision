@@ -1,10 +1,11 @@
-from fast_zero.app import app
 from fastapi.testclient import TestClient
+
+from pik_vision.app import app
 
 client = TestClient(app)
 
 
 def test_read_root():
     response = client.get('/')
-    assert response.status_code == '200'
+    assert response.status_code == 200
     assert response.json() == {'message': 'Hello World!'}
